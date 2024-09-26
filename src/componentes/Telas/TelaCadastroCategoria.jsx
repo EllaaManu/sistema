@@ -22,7 +22,7 @@ export default function TelaCadastroCategoria(props) {
     return (
         <div>
             <Pagina>
-                |<Alert className="mt-02 mb-02 dark text-center" variant="dark">
+                <Alert className="mt-02 mb-02 dark text-center" variant="dark">
                     <h2>
                         Cadastro de Categoria
                     </h2>

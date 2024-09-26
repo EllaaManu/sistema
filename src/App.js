@@ -4,6 +4,7 @@ import TelaCadastroCategoria from "./componentes/Telas/TelaCadastroCategoria";
 import TelaMenu from "./componentes/Telas/TelaMenu";
 import Tela404 from "./componentes/Telas/Tela404";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import TelaCadastroCliente from "./componentes/Telas/TelaCadastroCliente";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/produto" element={<TelaCadastroProduto />} />
           <Route path="/categoria" element={<TelaCadastroCategoria />} />
+          <Route path="cliente" element={<TelaCadastroCliente/>} />
           <Route path="/" element={<TelaMenu />} />
           <Route path="*" element={<Tela404 />} />
         </Routes>
