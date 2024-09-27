@@ -110,6 +110,7 @@ export default function FormCadClientes(props) {
                     <Button
                         onClick={() => {
                             props.setExibirCliente(true);
+                            props.setClienteSelecionado(clienteReseta);
                         }}
                         type="button"
                         variant="success"

@@ -155,7 +155,8 @@ export default function FormCadProdutos(props) {
         <Col md={{ offset: 1 }}>
           <Button
             onClick={() => {
-              props.setExibirTabela(true);
+                props.setExibirTabela(true);
+                props.setProdutoSelecionado(produtoReseta);
             }}
             type="button"
             variant="success"

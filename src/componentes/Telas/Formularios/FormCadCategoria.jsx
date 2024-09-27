@@ -130,6 +130,7 @@ export default function FormCadCategorias(props) {
           <Button
             onClick={() => {
               props.setExibirCategoria(true);
+              props.setCategoriaSelecionada(categoriaReseta);
             }}
             type="button"
             variant="success"
