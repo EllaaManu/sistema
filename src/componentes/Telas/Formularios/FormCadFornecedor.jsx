@@ -67,7 +67,7 @@ export default function FormCadFornecedor(props) {
           {/* ########## nome ########## */}
           <Form.Group className="mb-3">
             <Form.Label>Nome:</Form.Label>
-            <Form.Control required type="text" id="nome" name="nome" value={props.fornecedorSelecionado.descricao} onChange={manipularMudanca} placeholder="Nome:" />
+            <Form.Control required type="text" id="nome" name="nome" value={props.fornecedorSelecionado.nome} onChange={manipularMudanca} placeholder="Nome:" />
             <Form.Control.Feedback type="invalid">
               Por favor, informe a nome do fonecedor!
             </Form.Control.Feedback>
@@ -82,7 +82,12 @@ export default function FormCadFornecedor(props) {
                 <Form.Control required type="text" id="cnpj" name="cnpj" value={props.fornecedorSelecionado.cnpj} onChange={manipularMudanca} placeholder="CNPJ:" />
                 <Form.Control.Feedback type="invalid">
                 Por favor, informe o CNPJ do fornecedor!
-                </Form.Control.Feedback>
+              </Form.Control.Feedback>
+              <Form.Label>Contato:</Form.Label>
+              <Form.Control required type="text" id="contato" name="contato" value={props.fornecedorSelecionado.contato} onChange={manipularMudanca} placeholder="Contato:" />
+              <Form.Control.Feedback type="invalid">
+                Por favor, informe o contato do fornecedor!
+              </Form.Control.Feedback>
             </Form.Group>
             </Col>
             
@@ -93,7 +98,7 @@ export default function FormCadFornecedor(props) {
                 <Form.Control required type="text" id="localizacao" name="localizacao" value={props.fornecedorSelecionado.localizacao} onChange={manipularMudanca} placeholder="Localizacao:" />
                 <Form.Control.Feedback type="invalid">
                 Por favor, informe o localizacao do fornecedor!
-                </Form.Control.Feedback>
+              </Form.Control.Feedback>
             </Form.Group>
             </Col>
             </Row>
@@ -107,7 +112,8 @@ export default function FormCadFornecedor(props) {
                 <Col md={{ offset: 1 }}>
                 <Button
                     onClick={() => {
-                    props.setExibirFornecedor(true);
+                      props.setExibirFornecedor(true);
+                      props.setFornecedorSelecionado(fornecedorReseta);
                     }}
                     type="button"
                     variant="success"

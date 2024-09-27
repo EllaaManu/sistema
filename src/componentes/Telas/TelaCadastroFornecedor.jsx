@@ -1,7 +1,9 @@
 import { Alert } from "react-bootstrap";
-import fornecedores from "../../dados/mockFornecedores";
+import { fornecedores } from "../../dados/mockFornecedores";
 import FormCadFornecedor from "./Formularios/FormCadFornecedor";
 import TabelaFornecedores from "./Tabelas/TabelaFornecedores";
+import { useState } from "react";
+import Pagina from "../layouts/Pagina";
 
 export default function TelaCadastroFornecedor(props) {
 
@@ -29,11 +31,18 @@ export default function TelaCadastroFornecedor(props) {
                         listaFornecedor={listaFornecedor}
                         setListaFornecedor={setListaFornecedor}
                         setExibirFornecedor={setExibirFornecedor}
-                    /> :
-                    
-                    
-                    
-                    <FormCadFornecedor />}
+                        setModoEdicao={setModoEdicao}
+                        setFornecedorSelecionado={setFornecedorSelecionado}
+                        /> :
+                        <FormCadFornecedor
+                        setListaFornecedor={setListaFornecedor}
+                        listaFornecedor={listaFornecedor}
+                        setExibirFornecedor={setExibirFornecedor}
+                        setModoEdicao={setModoEdicao}
+                        modoEdicao={modoEdicao}
+                        setFornecedorSelecionado={setFornecedorSelecionado}
+                        fornecedorSelecionado={fornecedorSelecionado}
+                    />}
             </Pagina>
         </div>
     );
