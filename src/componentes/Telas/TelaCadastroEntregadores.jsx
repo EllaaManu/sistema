@@ -1,13 +1,13 @@
-// TelaCadastroEntregador.jsx
 import FormCadEntregadores from "./Formularios/FormCadEntregadores";
 import TabelaEntregadores from "./Tabelas/TabelaEntregadores";
 import { useState } from "react";
 import { Alert } from "react-bootstrap";
 import Pagina from "../layouts/Pagina";
+import { entregadores } from "../../dados/mockEntregadores";
 
 export default function TelaCadastroEntregador(props) {
     const [exibirEntregador, setExibirEntregador] = useState(true);
-    const [listaEntregador, setListaEntregador] = useState([]);
+    const [listaEntregador, setListaEntregador] = useState(entregadores);
     const [modoEdicao, setModoEdicao] = useState(false);
     const [entregadorSelecionado, setEntregadorSelecionado] = useState({
         codigo: 0,

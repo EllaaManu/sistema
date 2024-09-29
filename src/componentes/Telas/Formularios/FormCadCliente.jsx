@@ -13,7 +13,6 @@ export default function FormCadClientes(props) {
         nome: "",
         cpf: "",
         email: "",
-        urlImagem: ""
     }
 
     function manipularSubmissao(evento) {
@@ -85,17 +84,6 @@ export default function FormCadClientes(props) {
                         <Form.Control required type="email" id="email" name="email" value={props.clienteSelecionado.email} onChange={manipularMudanca} placeholder="Email:" />
                         <Form.Control.Feedback type="invalid">
                             Por favor, informe o email!
-                        </Form.Control.Feedback>
-                    </Form.Group>
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                    <Form.Group className="mb-3">
-                        <Form.Label>Url da imagem de perfil:</Form.Label>
-                        <Form.Control required type="url" id="urlImagem" name="urlImagem" value={props.clienteSelecionado.urlImagem} onChange={manipularMudanca} placeholder="Url da imagem:" />
-                        <Form.Control.Feedback type="invalid">
-                            Por favor, informe a imagem de perfil!
                         </Form.Control.Feedback>
                     </Form.Group>
                 </Col>

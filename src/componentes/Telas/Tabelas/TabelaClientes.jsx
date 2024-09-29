@@ -34,7 +34,6 @@ export default function TabelaClientes(props) {
                             <th>Nome</th>
                             <th>Cpf</th>
                             <th>Email</th>
-                            <th>Imagem</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
@@ -46,7 +45,6 @@ export default function TabelaClientes(props) {
                                     <td>{cliente.nome}</td>
                                     <td>{cliente.cpf}</td>
                                     <td>{cliente.email}</td>
-                                    <td><img src={cliente.urlImagem} /></td>
                                     <td>
                                         <Button
                                             onClick={() => {
